@@ -1,0 +1,20 @@
+{
+  "name": "react-typescript-tailwind-parcel-boilerplate",
+  "version": "1.0.0",
+  "description": "A boiler plate for modern react applications using typescript styled with tailwindCss and bundled with parcel",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ersanyamarya/react-typescript-tailwind-parcel-boilerplate.git"
+  },
+  "keywords": ["react","typescript","boilerplate","tailwindcss","emotions"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ersanyamarya/react-typescript-tailwind-parcel-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ersanyamarya/react-typescript-tailwind-parcel-boilerplate#readme"
+}
