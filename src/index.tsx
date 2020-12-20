@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { lazy, ReactElement, Suspense } from 'react'
 import { render } from 'react-dom'
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import { Global, css } from '@emotion/react'
-import { Router } from '@reach/router'
+import { Router, RouteComponentProps } from '@reach/router'
 
-import { Forms, Texts } from './modules'
 import { Navigation } from './components/indux'
 
-const Section = styled.div`
-  width: 100vw;
-  height: 100vh;
-`
+const Forms = lazy(() => import('./modules/forms'))
+const Texts = lazy(() => import('./modules/texts'))
+
+const RouterPage = (props: { pageComponent: ReactElement } & RouteComponentProps) => props.pageComponent
+
+// const Section = styled.div`
+//   width: 100vw;
+//   height: 100vh;
+// `
 
 const NotFound = () => <div>Sorry, nothing here.</div>
 const Application = () => (
@@ -193,11 +197,13 @@ const Application = () => (
       `}
     />
     <Navigation />
-    <Router>
-      <Forms path="/forms" />
-      <Texts path="/texts" />
-      <NotFound default />
-    </Router>
+    <Suspense fallback={<h1>loading route …</h1>}>
+      <Router>
+        <RouterPage path="/forms" pageComponent={<Forms />} />
+        <RouterPage path="/texts" pageComponent={<Texts />} />
+        <RouterPage default pageComponent={<NotFound />} />
+      </Router>
+    </Suspense>
   </>
 )
 

@@ -34,11 +34,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
     'prettier',
     'prettier/react',
   ],
-  plugins: ['@typescript-eslint', 'react', 'prettier', 'import', 'jsx-a11y'],
+  plugins: ['@typescript-eslint', 'react', 'prettier', 'import'],
   rules: {
     '@typescript-eslint/no-use-before-define': 'off',
     'prettier/prettier': 'error',

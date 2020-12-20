@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-const Forms = (): JSX.Element => {
+const Forms = (): ReactElement => {
   return (
     <>
       <button>Normal Button</button>

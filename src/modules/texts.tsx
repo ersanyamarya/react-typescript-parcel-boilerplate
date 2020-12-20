@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-const Texts = (): JSX.Element => {
+const Texts = (): ReactElement => {
   return (
     <>
       <h1>Header Text H1</h1>
