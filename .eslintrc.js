@@ -16,6 +16,14 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx', '.native.js', '.png'],
+      },
+    },
+  },
+  globals: {
+    tw: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -39,6 +47,6 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
-    'no-use-before-define': 'off',
+    // 'no-use-before-define': 'off',
   },
 }
