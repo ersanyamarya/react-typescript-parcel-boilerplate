@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { Notification } from '~/components'
 
 const Texts = (): ReactElement => {
   return (
@@ -8,7 +9,6 @@ const Texts = (): ReactElement => {
       <h3>Header Text H3</h3>
       <h4>Header Text H4</h4>
       <h5>Header Text H5</h5>
-      <h1 tw="text-blue-500 text-2xl">Hello world</h1>
 
       <p>
         Laboris laborum nostrud exercitation sit non mollit irure nulla anim officia elit commodo cupidatat. Non elit
@@ -21,6 +21,8 @@ const Texts = (): ReactElement => {
         excepteur. Minim ad consequat nisi anim id elit culpa ea. Eu enim labore et nulla labore consequat eiusmod
         mollit laboris proident ad ex.
       </p>
+
+      <Notification title="Pipeline saved" description="You can find your saved Pipelines in the Library." />
     </>
   )
 }

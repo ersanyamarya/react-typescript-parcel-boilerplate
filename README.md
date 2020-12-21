@@ -1,3 +1,3 @@
-# react-typescript-tailwind-parcel-boilerplate
+# react-typescript-parcel-boilerplate
 
-A boiler plate for modern react applications using typescript styled with tailwindCss and bundled with parcel.
+A boiler plate for modern react applications using typescript styled with css-in-js (emotion) and bundled with parcel

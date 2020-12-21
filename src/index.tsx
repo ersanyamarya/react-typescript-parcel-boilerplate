@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 import { Global, css } from '@emotion/react'
 import { Router, RouteComponentProps } from '@reach/router'
 
-import { Navigation } from './components/indux'
+import { Navigation } from './components'
 
 const Forms = lazy(() => import('./modules/forms'))
 const Texts = lazy(() => import('./modules/texts'))
@@ -33,6 +33,7 @@ const Application = () => (
           --weeve-yellow: #ffd23b;
 
           --weeve-corner-radius: 5px;
+          --weeve-shadow-light: 3px 3px 3px var(--shadow-4a4a4a-10);
         }
         * {
           box-sizing: border-box;
@@ -63,7 +64,7 @@ const Application = () => (
         h3,
         h4,
         h5 {
-          padding: 1rem;
+          // padding: 1rem;
         }
         h1 {
           font-weight: bold;
@@ -95,10 +96,11 @@ const Application = () => (
           font-size: 0.75rem;
           line-height: 1rem;
         }
-        nav > a {
+        nav * a {
           margin: 0 1rem;
           padding: 0.75rem 2.5rem;
           text-decoration: none;
+          line-height: 2.6rem;
           border-radius: var(--weeve-corner-radius);
           color: var(--weeve-tedratic-grey);
           background-color: var(--weeve-turquoise);
@@ -110,6 +112,10 @@ const Application = () => (
             background-color: var(--weeve-mint);
           }
         }
+        label {
+          font-weight: bold;
+          padding 1rem;
+        }
         input,
         select {
           margin: 1rem;
@@ -120,15 +126,22 @@ const Application = () => (
           padding: 0.75rem 1.5rem;
           outline: none;
           border: 1px solid var(--pure-white);
-          background: transparent;
           border-radius: var(--weeve-corner-radius);
           background: var(--pure-white) 0% 0% no-repeat padding-box;
-          box-shadow: 3px 3px 3px var(--shadow-4a4a4a-10);
+          box-shadow: var(--weeve-shadow-light);
           border-radius: var(--weeve-corner-radius);
           &:active,
           &:focus {
             border: 1px solid var(--weeve-turquoise);
           }
+        }
+       option {
+          border: 1px solid #e5e5e5;
+          padding: 10px;
+        }
+        label{
+          padding:1rem;
+          font-weight: bold;
         }
         button {
           margin: 1rem;
@@ -142,7 +155,7 @@ const Application = () => (
           padding: 0.75rem 1.75rem;
           background: transparent linear-gradient(107deg, var(--weeve-mint) 0%, var(--weeve-turquoise) 100%) 0% 0%
             no-repeat padding-box;
-          box-shadow: 3px 3px 3px var(--shadow-4a4a4a-10);
+          box-shadow: var(--weeve-shadow-light);
           border-radius: var(--weeve-corner-radius);
           border: 0;
           outline: none;
@@ -193,6 +206,12 @@ const Application = () => (
             opacity: 0;
             transform: scale(1);
           }
+        }
+        .card-dark{
+          background-color: var(--weeve-tedratic-grey) ;
+          color: var(--brilliant-shadow);
+          border-radius: var(--weeve-corner-radius);
+          box-shadow: var(--weeve-shadow-light);
         }
       `}
     />

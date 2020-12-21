@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-tailwind-parcel-boilerplate",
+  "name": "react-typescript-parcel-boilerplate",
   "version": "1.0.0",
-  "description": "A boiler plate for modern react applications using typescript styled with tailwindCss and bundled with parcel",
+  "description": "A boiler plate for modern react applications using typescript styled with css-in-js (emotion) and bundled with parcel",
   "main": ".eslintrc.js",
   "scripts": {
     "prebuild": "run-s clean && npm run build:tailwind",
@@ -27,7 +27,6 @@
     "react",
     "typescript",
     "boilerplate",
-    "tailwindcss",
     "emotions"
   ],
   "author": "Sanyam Arya",
