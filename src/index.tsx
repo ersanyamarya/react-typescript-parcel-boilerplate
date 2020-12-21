@@ -1,20 +1,22 @@
 import React, { lazy, ReactElement, Suspense } from 'react'
 import { render } from 'react-dom'
-// import styled from '@emotion/styled'
 import { Global, css } from '@emotion/react'
 import { Router, RouteComponentProps } from '@reach/router'
 
 import { Navigation } from './components'
 
-const Forms = lazy(() => import('./modules/forms'))
-const Texts = lazy(() => import('./modules/texts'))
+const Forms = lazy(() => import('./pages/forms'))
+const Texts = lazy(() => import('./pages/texts'))
 
 const RouterPage = (props: { pageComponent: ReactElement } & RouteComponentProps) => props.pageComponent
 
-// const Section = styled.div`
-//   width: 100vw;
-//   height: 100vh;
-// `
+const COLORS = {
+  blue: '#4190c4',
+  attention: '#ff2266',
+  brilliantShadow: '#fafafa',
+  white: '#ffffff',
+  tederaticGrey: '#4a4a4a',
+}
 
 const NotFound = () => <div>Sorry, nothing here.</div>
 const Application = () => (
@@ -22,11 +24,11 @@ const Application = () => (
     <Global
       styles={css`
         :root {
-          --weeve-blue: #4190c4;
-          --weeve-attention: #ff2266;
-          --brilliant-shadow: #fafafa;
-          --pure-white: #ffffff;
-          --weeve-tedratic-grey: #4a4a4a;
+          --weeve-blue: ${COLORS.blue};
+          --weeve-attention: ${COLORS.attention};
+          --brilliant-shadow:${COLORS.brilliantShadow};
+          --pure-white: ${COLORS.white};
+          --weeve-tedratic-grey: ${COLORS.tederaticGrey};
           --shadow-4a4a4a-10: #4a4a4a1a;
           --weeve-turquoise: #41c4b7;
           --weeve-mint: #a2ece2;

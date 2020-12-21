@@ -18,6 +18,9 @@ const NotificationCard = styled.div`
 
     & > span {
       font-weight: bold;
+      text-transform: uppercase;
+    }
+    & > p {
     }
   }
 `

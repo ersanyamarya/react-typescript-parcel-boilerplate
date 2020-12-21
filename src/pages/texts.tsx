@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
-import { Notification } from '~/components'
+import { TypeOfNotification } from '../components/notification'
+import { Notification } from '../components'
 
 const Texts = (): ReactElement => {
   return (
@@ -22,7 +23,11 @@ const Texts = (): ReactElement => {
         mollit laboris proident ad ex.
       </p>
 
-      <Notification title="Pipeline saved" description="You can find your saved Pipelines in the Library." />
+      <Notification
+        title="Pipeline saved"
+        description="You can find your saved Pipelines in the Library."
+        type={TypeOfNotification.SAVE}
+      />
     </>
   )
 }
