@@ -137,6 +137,12 @@ const Application = () => (
             border: 1px solid var(--weeve-turquoise);
           }
         }
+        input[type=checkbox]{
+          background-color: var(--weeve-mint)
+          font-size: 48px;
+          height:24px;
+          width:24px;
+        }
        option {
           border: 1px solid #e5e5e5;
           padding: 10px;
@@ -165,7 +171,6 @@ const Application = () => (
           transition: transform 0.15s;
 
           // &:after {
-          //   display: block;
           //   position: absolute;
           //   border-radius: 50%;
           //   background-color: var(--weeve-turquoise);
